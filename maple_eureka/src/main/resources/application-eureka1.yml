@@ -1,0 +1,29 @@
+# 项目基础配置---------------------------------------------------------------------
+server:
+  port: 1111  #端口号
+
+spring:
+  application:
+    name: maple_eureka  #项目名
+    
+# eureka服务器端基础配置--------------------------------------------------------------    
+eureka:
+  instance:
+    hostname: eureka1  #eureka注册中心主机名
+    lease-renewal-interval-in-seconds: 15 # 设置心跳的时间间隔（默认是30秒）
+    lease-expiration-duration-in-seconds: 45 # 如果现在超过了5秒的间隔（默认是90秒）
+  client:
+    register-with-eureka: false #false表示不向注册中心注册自己。
+    fetch-registry: false #false表示自己端就是注册中心，我的职责就是维护服务实例，并不需要去检索服务
+    serviceUrl: 
+      defaultZone: http://eureka2:1112/eureka/,http://eureka3:1113/eureka/  #单机设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址（单机）
+  server: 
+    enable-self-preservation: true #Eureka服务端关闭心跳连接测试
+
+# 是否启用安全策略 security.basic.enabled为true时表示开启-------------------------------
+security:
+  basic:
+    enabled: false
+  user:
+    name: admin
+    password: maple123456
