@@ -38,7 +38,7 @@
 		</dependency> -->
 	</dependencies>
 	
-	<!-- 和dependencies同级，不加以下部分，引入spring-cloud-starter-eureka-server会不成功 -->
+	<!-- 引入springCloud的版本 -->
 	<dependencyManagement>
 		<dependencies>
 	        <dependency>
