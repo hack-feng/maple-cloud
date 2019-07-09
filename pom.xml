@@ -3,7 +3,7 @@
   <groupId>com.maple</groupId>
   <artifactId>maple_parent</artifactId>
   <version>0.0.1-SNAPSHOT</version>
-  <packaging>pom</packaging>
+    <packaging>pom</packaging>
   <name>maple_parent</name>
   <description>spring cloud parent project.</description>
   
