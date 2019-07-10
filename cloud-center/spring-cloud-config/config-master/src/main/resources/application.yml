@@ -1,0 +1,22 @@
+# ¶Ë¿ÚºÃ
+server:
+  port: 2001
+
+
+spring:
+  application:
+    name: config-master
+  cloud:
+    config:
+      profile: dev
+      server:
+        git:
+          uri: https://github.com/hack-feng/maple-properties
+          search-paths: /
+      label: master
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1111/eureka/
