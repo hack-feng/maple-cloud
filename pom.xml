@@ -1,19 +1,40 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.maple</groupId>
-  <artifactId>maple_parent</artifactId>
+  <artifactId>maple-cloud</artifactId>
   <version>0.0.1-SNAPSHOT</version>
+    <modules>
+        <module>cloud-center</module>
+		<module>common-center</module>
+		<module>project-center</module>
+		<module>logger-center</module>
+	</modules>
     <packaging>pom</packaging>
-  <name>maple_parent</name>
+  <name>maple-cloud</name>
   <description>spring cloud parent project.</description>
-  
-  <parent>
-		<groupId>org.springframework.boot</groupId>
-		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.9.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
-	</parent>
-	
+
+	<!-- 引入springCloud的版本 -->
+	<dependencyManagement>
+		<dependencies>
+			<!--支持Spring Boot 2.1.X-->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>1.5.9.RELEASE</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>Dalston.SR3</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -37,19 +58,6 @@
 		    <artifactId>spring-boot-starter-security</artifactId>
 		</dependency> -->
 	</dependencies>
-	
-	<!-- 引入springCloud的版本 -->
-	<dependencyManagement>
-		<dependencies>
-	        <dependency>
-	            <groupId>org.springframework.cloud</groupId>
-	            <artifactId>spring-cloud-dependencies</artifactId>
-	            <version>Dalston.SR3</version>
-	            <type>pom</type>
-	            <scope>import</scope>
-	        </dependency>
-	    </dependencies>
-	</dependencyManagement>
 	
 	<properties>
 		<java.version>1.8</java.version>

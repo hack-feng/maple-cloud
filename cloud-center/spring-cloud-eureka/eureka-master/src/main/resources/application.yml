@@ -1,0 +1,26 @@
+# 项目端口号
+server:
+  port: 1111
+
+# 实例名称
+spring:
+  application:
+    name: eureka-master
+
+# eureka的配置信息
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: false
+    register-with-eureka: false
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+
+# 是否启用安全策略 security.basic.enabled为true时表示开启
+security:
+  basic:
+    enabled: false
+  user:
+    name: maple
+    password: 123456
