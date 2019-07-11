@@ -1,7 +1,5 @@
-# ¶Ë¿ÚºÃ
 server:
-  port: 2001
-
+  port: 8888
 
 spring:
   application:
@@ -14,7 +12,6 @@ spring:
           uri: https://github.com/hack-feng/maple-properties
           search-paths: /
       label: master
-
 
 eureka:
   client:
