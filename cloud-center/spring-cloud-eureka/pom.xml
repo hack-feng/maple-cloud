@@ -16,7 +16,7 @@
         <!-- 引入Eureka Server，用于注册Eureka服务 -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-eureka-server</artifactId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
 
         <!-- Eureka注册中心加入权限 非必须，如果不许登录，可以不引入依赖-->

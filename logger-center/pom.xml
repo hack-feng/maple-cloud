@@ -12,5 +12,11 @@
     <artifactId>logger-center</artifactId>
     <packaging>pom</packaging>
 
+    <modules>
+        <module>logger-base</module>
+    </modules>
+
+
+
 
 </project>

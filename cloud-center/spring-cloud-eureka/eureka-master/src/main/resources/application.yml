@@ -6,6 +6,10 @@ server:
 spring:
   application:
     name: eureka-master
+  security:
+    user:
+      name: admin
+      password: 123456
 
 # eureka的配置信息
 eureka:
@@ -17,10 +21,11 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:1111/eureka/
 
-# 是否启用安全策略 security.basic.enabled为true时表示开启
-security:
-  basic:
-    enabled: false
-  user:
-    name: maple
-    password: 123456
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: ALWAYS
